@@ -5,3 +5,16 @@
   Description: BUILDY â€“ is a  Constructor HTML5 template that comes with high-quality 3 Pre build Home Pages and many built-in awesome inner pages  which are perfect for any creative agencies, designers, digital agencies, freelancers, developers, designers, marketing, startup, blog and portfolio.
   Version: 1.0
 */
+
+.logo1 {
+  height: 50px;
+  width: 120px;
+  border-radius: 20%;
+  color: white;
+}
+.footer__logo {
+  height: 50px;
+  width: 120px;
+  border-radius: 20%;
+  color: white 
+}
