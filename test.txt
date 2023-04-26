@@ -455,61 +455,30 @@
           </div>
           <div class="container pb-140">
             <div class="row">
-              <!-- Roll area start -->
-              <section class="roll__area-2">
-                <div class="swiper roll__slider">
-                  <div class="swiper-wrapper roll__wrapper">
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/1-AU.webp" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/17-Arohan.webp" alt="">
-                    </div>
-
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/3-RR.webp" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/splash.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/bamboo1.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/FiveFerns.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img style="height: 60px; width: 150px;" class="" src="/assets/imgs/logo/Softserv.png" alt="">
-                    </div>
-                    <!-- <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/106.png" alt="">
-                    </div> -->
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/arbic.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/108.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/dbf6.png" alt="">
-                    </div>
-
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/apty.png" alt="">
-                    </div>
-
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/Ingen Tech.png" alt="">
-                    </div>
-                    <div class="swiper-slide roll__slide">
-                      <img class="brand" src="/assets/imgs/logo/anchor.png" alt="">
-                    </div>
-
-
+              <div class="col-xxl-12">
+                <h2 class="brand__title-2 title-anim">We worked with global largest brands
+                </h2>
+                <div class="brand__list-2">
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/Arohan.png" height="70" width="70" alt="Brand Logo">
+                  </div>
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/au.jpg" height="70" width="130" alt="Brand Logo">
+                  </div>
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/gbp.webp" height="70" width="130" alt="Brand Logo">
+                  </div>
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/va2.png" height="70" width="130" alt="Brand Logo">
+                  </div>
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/download.png" height="70" width="130" alt="Brand Logo">
+                  </div>
+                  <div class="brand__item-2 fade_bottom">
+                    <img src="assets/imgs/logo/SoftServe-Logo1-500x130.jpg" height="70" width="130" alt="Brand Logo">
                   </div>
                 </div>
-              </section>
-              <!-- Roll area end -->
+              </div>
             </div>
           </div>
         </section>
