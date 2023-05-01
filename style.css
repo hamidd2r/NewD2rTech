@@ -8,14 +8,14 @@
 
 .logo1 {
   height: 50px;
-  width: 120px;
+  width: 140px;
   margin-top: 0px;
   border-radius: 20%;
   color: white;
 }
 .footer__logo {
   height: 50px;
-  width: 120px;
+  width: 141px;
   border-radius: 20%;
   color: white 
 }
@@ -32,12 +32,18 @@
 
 
     #sidelogo2{
-      height: 120px;
-      width: 50px;
+      height: 157px;
+      width: 57px;
     }
 
 
     .brand {
       height: 70px;
+      width: 100px;
+    }
+
+
+    .logobrand{
+      height: 100px;
       width: 100px;
     }
