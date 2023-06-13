@@ -23,7 +23,7 @@
   Re-Engineering">
   <title>D2R Tech</title>
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/logo2.png">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,7 +201,8 @@
                 <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-6">
                   <div class="feature__text text-anim">
                     <!-- <p>Our approach involves constantly reimagining the future through the development of innovative products, brands, and services that blend different perspectives. By embracing this hybrid mindset, what may seem impossible today becomes an inevitable reality tomorrow.</p> -->
-                    <p>Through an Agile and hybrid approach, we consistently innovate and develop the next generation of
+                    <p style="text-align: justify;">Through an Agile and hybrid approach, we consistently innovate and
+                      develop the next generation of
                       products, brands, and services, thereby challenging conventional thinking and transforming what
                       may seem impossible today into an inevitable reality.</p>
                   </div>
@@ -337,7 +338,7 @@
         </section>
         <!-- Roll area end -->
         <!-- Portfolio area start -->
-        <section class="portfolio__area-2">
+        <!-- <section class="portfolio__area-2">
           <div class="container g-0 line pt-100 pb-140">
             <div class="row">
               <div class="col-xxl-12">
@@ -449,7 +450,7 @@
               <div class="swiper-pagination circle-pagination right"></div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Portfolio area end -->
         <!-- About area start -->
         <section class="about__area-2">
@@ -463,7 +464,8 @@
                 </div>
                 <div class="sec-text-wrapper">
                   <div class="sec-text text-anim">
-                    <p>We help brands stand out through powerful, elegant visual design. Our design philosophy is shaped
+                    <p style="text-align: justify;">We help brands stand out through powerful, elegant visual design.
+                      Our design philosophy is shaped
                       by our experience growing up at our father’s bookbindery. Surrounded by the highest-quality
                       materials and turn-of-the-century machines, we observed the art of true craftsmanship firsthand.
                     </p>
@@ -547,7 +549,8 @@
             <div class="row">
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                 <div class="sec-text text-anim">
-                  <p>We are passionate to create connected brands and services, and campaigns to enable stable and
+                  <p style="text-align: justify;">We are passionate to create connected brands and services, and
+                    campaigns to enable stable and
                     successful relationships between businesses and customers.</p>
                 </div>
               </div>
@@ -564,7 +567,7 @@
                     <div>
                       <img src="assets/imgs/service/1.png" alt="D2rTEch Service Icon">
                       <h3 class="service__title-2">Education<br></h3>
-                      <p>Custom solution for University Data migration from one Year to
+                      <p style="text-align: justify;">Custom solution for University Data migration from one Year to
                         another year.
                         And more...
                       </p>
@@ -576,7 +579,7 @@
                       <h3 class="service__title-2 ">Insurance
                         <br>
                       </h3>
-                      <p>Comprehensive insurance planning
+                      <p style="text-align: justify;">Comprehensive insurance planning
                         enterprise solution
                       </p>
                       <!-- <ul>
@@ -590,7 +593,7 @@
                     <div>
                       <img src="assets/imgs/service/3.png" alt="D2rTEch Service Icon">
                       <h3 class="service__title-2">E-Commerce <br></h3>
-                      <p>Built End to End e-commerce solution from
+                      <p style="text-align: justify;">Built End to End e-commerce solution from
                         scratch including custom UI, Custom CRM and
                         ERP solution to manage the operations.
                         And more...
@@ -669,8 +672,8 @@
               </div>
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                 <div class="footer__subscribe-2">
-                  <form action="#">
-                    <input type="text" name="email" placeholder="Enter your email">
+                  <form id="emailForm" action="#">
+                    <input id="email" type="text" name="email" placeholder="Enter your email">
                     <button type="submit" class="submit"><img src="assets/imgs/icon/arrow-black.png"
                         alt="D2rTEch Arrow Icon"></button>
                   </form>
@@ -724,6 +727,22 @@
   <script src="assets/js/vanilla-tilt.js"></script>
   <script src="assets/js/jquery.meanmenu.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Retrieve the email value
+      var email = document.getElementById("email").value;
+
+      // Send the email using your preferred method
+      // Here, you can use JavaScript to send an email via an API or process it on the server-side
+
+      // Example: Sending email using the mailto: protocol
+      window.location.href = "mailto" + email;
+    });
+  </script>
 
 
 </body>
