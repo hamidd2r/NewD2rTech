@@ -14952,7 +14952,7 @@ img {
 .blog__detail-content ul li::before,
 .blog__detail-content ol li::before {
   position: absolute;
-  content: "+";
+  /* content: "+"; */
   left: 0;
   font-size: 20px;
 }
