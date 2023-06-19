@@ -5875,7 +5875,7 @@ img {
           animation: wcRotate 18s infinite linear;
 }
 .hero__area-2 {
-  background-image: url(../imgs/bg/lines.png);
+  /* background-image: url(../imgs/bg/lines.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--black-2);
@@ -6011,7 +6011,7 @@ img {
   }
 }
 .hero__area-2 .sec-title-wrapper .bg-shape {
-  background-image: url(../imgs/shape/10.png);
+  /* background-image: url(../imgs/shape/10.png); */
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -6858,7 +6858,7 @@ img {
   color: var(--white);
 }
 .hero__about {
-  background-image: url(../imgs/about/about-bg.png);
+  /* background-image: url(../imgs/about/about-bg.png); */
   background-repeat: no-repeat;
   background-position: top right;
   overflow: hidden;
@@ -11196,7 +11196,7 @@ img {
   background-color: var(--white);
   padding: 80px;
   margin-top: 140px;
-  background-image: url(../imgs/icon/quote-primary.png);
+  /* background-image: url(../imgs/icon/quote-primary.png); */
   background-repeat: no-repeat;
   background-position: 80px 80px;
   margin-right: 2px;
@@ -13577,7 +13577,7 @@ img {
 }
 .portfolio__service {
   /* background-color: var(--green-2); */
-  background-image: url(../imgs/shape/17.png);
+  /* background-image: url(../imgs/shape/17.png); */
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -13604,7 +13604,7 @@ img {
   }
 }
 .portfolio__service .sec-text {
-  background-image: url(../imgs/shape/14.png);
+  /* background-image: url(../imgs/shape/14.png); */
   background-repeat: no-repeat;
   background-position: 0 80px;
   opacity: 0;

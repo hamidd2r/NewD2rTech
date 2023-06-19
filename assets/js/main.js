@@ -254,7 +254,7 @@
           }, "-=0.4")
   
       } catch (error) {
-        console.log(error)
+        // console.log(error)
       }
   
     }
@@ -1206,7 +1206,7 @@
     else {
       var hero_btn = document.querySelector(".hero__text-2 #btn_wrapper")
     }
-    console.log(hero_btn)
+    // console.log(hero_btn)
     tHero.from(hero_btn, {
       opacity: 0,
       y: -70,
@@ -1496,7 +1496,7 @@
         }
       }
       catch (err) {
-        console.log(err)
+        // console.log(err)
       }
     }
     /////////////////////////////////////////////////////
@@ -1552,7 +1552,7 @@
         }
       }
       catch (err) {
-        console.log(err)
+        // console.log(err)
       }
     }
   
@@ -2927,7 +2927,7 @@
         const dy = event.clientY - contentBox.y;
         document.querySelector('.hover_8_img').style.transform = `translate(${dx}px, ${dy}px)`;
   
-        console.log(event.pageX);
+        // console.log(event.pageX);
       }
       hover_8_wrap[0].addEventListener("mousemove", (event) => {
         setInterval(showCase8Func(event, hover_8_wrap), 1000);

@@ -5395,8 +5395,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
-    url(../webfonts/fa-brands-400.ttf) format('truetype');
+  /* src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
+    url(../webfonts/fa-brands-400.ttf) format('truetype'); */
 }
 .fa-brands,
 .fab {
@@ -6858,8 +6858,9 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
+  /* src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
     url(../webfonts/fa-solid-900.ttf) format('truetype');
+} */
 }
 .fa-solid,
 .fas {
@@ -6870,15 +6871,15 @@
   font-family: 'Font Awesome 5 Brands';
   font-display: block;
   font-weight: 400;
-  src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
-    url(../webfonts/fa-brands-400.ttf) format('truetype');
+  /* src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
+    url(../webfonts/fa-brands-400.ttf) format('truetype'); */
 }
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-display: block;
   font-weight: 900;
-  src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
-    url(../webfonts/fa-solid-900.ttf) format('truetype');
+  /* src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
+    url(../webfonts/fa-solid-900.ttf) format('truetype'); */
 }
 @font-face {
   font-family: 'Font Awesome 5 Free';
@@ -6890,14 +6891,14 @@
 @font-face {
   font-family: 'FontAwesome';
   font-display: block;
-  src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
-    url(../webfonts/fa-solid-900.ttf) format('truetype');
+  /* src: url(../webfonts/fa-solid-900.woff2) format('woff2'),
+    url(../webfonts/fa-solid-900.ttf) format('truetype'); */
 }
 @font-face {
   font-family: 'FontAwesome';
   font-display: block;
-  src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
-    url(../webfonts/fa-brands-400.ttf) format('truetype');
+  /* src: url(../webfonts/fa-brands-400.woff2) format('woff2'),
+    url(../webfonts/fa-brands-400.ttf) format('truetype'); */
 }
 @font-face {
   font-family: 'FontAwesome';
