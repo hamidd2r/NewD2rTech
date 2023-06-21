@@ -3419,3 +3419,42 @@
   
   })(jQuery);
   
+
+  
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Validate the form fields
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+        var subjectInput = document.getElementById("subject");
+        var messageInput = document.getElementById("message");
+
+        if (nameInput.value.trim() === "") {
+            alert("Please enter your name.");
+            nameInput.focus();
+            return;
+        }
+
+        if (emailInput.value.trim() === "") {
+            alert("Please enter your email.");
+            emailInput.focus();
+            return;
+        }
+
+        if (subjectInput.value.trim() === "") {
+            alert("Please enter the subject.");
+            subjectInput.focus();
+            return;
+        }
+
+        if (messageInput.value.trim() === "") {
+            alert("Please enter your message.");
+            messageInput.focus();
+            return;
+        }
+
+        // If all fields are valid, submit the form
+        this.submit();
+    });
