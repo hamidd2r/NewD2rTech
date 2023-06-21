@@ -203,7 +203,7 @@
                             </div>
                             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                                 <div class="contact__form">
-                                    <form id="contact-form" action="https://formspree.io/f/mzbqnqdg" method="POST">
+                                    <form id="insert-form" method="POST">
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="text" name="name" id="name" placeholder="Name *" required>
@@ -228,13 +228,27 @@
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <div class="btn_wrapper">
-                                                    <button type="submit" class="wc-btn-primary btn-hover btn-item"><span></span> Send Messages <i class="fa-solid fa-arrow-right"></i></button>
+                                                    <button type="button" onclick="submitInsert()" class="wc-btn-primary btn-hover btn-item"><span></span> Send Messages <i class="fa-solid fa-arrow-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
+
+                            <form id="formoid" action="studentFormInsert.php" title="" method="post">
+                                <div>
+                                    <label class="title">First Name</label>
+                                    <input type="text" id="name" name="name" >
+                                </div>
+                                <div>
+                                    <label class="title">Name</label>
+                                    <input type="text" id="name2" name="name2" >
+                                </div>
+                                <div>
+                                    <input type="submit" id="submitButton"  name="submitButton" value="Submit">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </section>
@@ -343,6 +357,31 @@
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- contact -->
+
+    <script>
+            function submitInsert() {
+                //alert("work");
+                var formData = {
+                name: $("#name").val(),
+                email: $("#email").val()
+                };
+
+                $.ajax({
+                type: "POST",
+                url: "https://demo.d2rtech.com/api/api/contact",
+                data: formData,
+                dataType: "json",
+                encode: true,
+                }).done(function (data) {
+                console.log(data);
+                });
+
+                event.preventDefault();
+            
+         }
+        </script>
+        
 </body>
 
 </html>
