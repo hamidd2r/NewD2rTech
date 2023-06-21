@@ -214,7 +214,7 @@
                                         </div>
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
-                                                <input type="tel" name="phone" id="phone" placeholder="Phone">
+                                                <input type="tel" name="phone" id="contact" placeholder="Phone">
                                             </div>
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="text" name="subject" id="subject" placeholder="Subject *" required>
@@ -235,20 +235,6 @@
                                     </form>
                                 </div>
                             </div>
-
-                            <form id="formoid" action="studentFormInsert.php" title="" method="post">
-                                <div>
-                                    <label class="title">First Name</label>
-                                    <input type="text" id="name" name="name" >
-                                </div>
-                                <div>
-                                    <label class="title">Name</label>
-                                    <input type="text" id="name2" name="name2" >
-                                </div>
-                                <div>
-                                    <input type="submit" id="submitButton"  name="submitButton" value="Submit">
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </section>
@@ -363,8 +349,11 @@
             function submitInsert() {
                 //alert("work");
                 var formData = {
-                name: $("#name").val(),
-                email: $("#email").val()
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    contact: $("#contact").val(),
+                    subject: $("#subject").val(),
+                    message: $("#message").val()
                 };
 
                 $.ajax({
