@@ -4592,8 +4592,9 @@ img {
 }
 .modal__apply .input-apply-2 input {
   width: 100%;
-  border: 1px solid var(--white-4);
+  border: 2px solid var(--white-4);
   outline: none;
+  background-color: white;
   padding: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
