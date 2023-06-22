@@ -825,7 +825,7 @@
           nav.addEventListener("click", (e) => {
             e.preventDefault();
             const ids = nav.getAttribute("href")
-            gsap.to(window, { duration: 0.5, scrollTo: ids, ease: "power4.out" });
+            gsap.to(window, { duration: 0.4, scrollTo: ids, ease: "power4.out" });
           })
         })
       }
@@ -3421,40 +3421,4 @@
   
 
   
-    document.getElementById("insert-form").addEventListener("button", function(event) {
-        // Prevent form submission
-        event.preventDefault();
-
-        // Validate the form fields
-        var nameInput = document.getElementById("name");
-        var emailInput = document.getElementById("email");
-        var subjectInput = document.getElementById("subject");
-        var messageInput = document.getElementById("message");
-
-        if (nameInput.value.trim() === "") {
-            alert("Please enter your name.");
-            nameInput.focus();
-            return;
-        }
-
-        if (emailInput.value.trim() === "") {
-            alert("Please enter your email.");
-            emailInput.focus();
-            return;
-        }
-
-        if (subjectInput.value.trim() === "") {
-            alert("Please enter the subject.");
-            subjectInput.focus();
-            return;
-        }
-
-        if (messageInput.value.trim() === "") {
-            alert("Please enter your message.");
-            messageInput.focus();
-            return;
-        }
-
-        // If all fields are valid, submit the form
-        this.submit();
-    });
+    
