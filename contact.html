@@ -207,25 +207,35 @@
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="text" name="name" id="name" placeholder="Name *" required>
+                                                <p style="color: tomato;" id="error-name"></p>
                                             </div>
+                                            <!-- <div style="color: tomato;" id="error-message1"></div> -->
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="email" name="email" id="email" placeholder="Email *" required>
+                                                <p style="color: tomato;" id="error-email"></p>
                                             </div>
+                                            <!-- <div style="color: tomato;" id="error-message2"></div> -->
                                         </div>
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="tel" name="contact" id="contact" placeholder="contact">
+                                                <p style="color: tomato;" id="error-contact"></p>
                                             </div>
+                                            <!-- <div style="color: tomato;" id="error-message3"></div> -->
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="text" name="subject" id="subject" placeholder="Subject *" required>
+                                                <p style="color: tomato;" id="error-subject"></p>
                                             </div>
+                                            <!-- <div style="color: tomato;" id="error-message4"></div> -->
                                         </div>
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <textarea name="message" id="message" placeholder="Messages *" required></textarea>
+                                                <p style="color: tomato;" id="error-textarea"></p>
                                             </div>
+                                            <!-- <div style="color: tomato;" id="error-message5"></div> -->
                                         </div>
-                                        <div style="text-align: end; color: tomato;" id="error-message"></div>
+                                       
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <div class="btn_wrapper">
@@ -305,7 +315,7 @@
                                 </div>
 
                                 <div class="footer__copyright">
-                                    <p>© 2023 | Alrights reserved by <a href="D2rTech" target="_blank">D2rTech</a>
+                                    <p>© 2023 | Alrights reserved by <a href="D2RTech" target="_blank">D2RTech</a>
                                     </p>
                                 </div>
 
@@ -360,21 +370,45 @@
             if (xhr.readyState === XMLHttpRequest.DONE) {
               if (xhr.status === 200) {
                 window.location.href = "thank-you.html";
-                // You can handle the successful response here
+               
               } 
 
     //          
     else {
-            // Request failed, handle the error
+           
             const obj = JSON.parse(xhr.response);
             console.log(obj.message)
             var errorMessage = obj.message;
+            if(errorMessage == "The name field is required."){
+               // errorMessage = errorMessage;
+                var errorMessageElement = document.getElementById("error-name");
+                errorMessageElement.textContent = errorMessage;
+            }
+            else if(errorMessage == "The email field is required."){
+                var errorMessageElement = document.getElementById("error-email");
+                errorMessageElement.textContent = errorMessage;
+            }
+
+            else if(errorMessage == "The contact must be a number."){
+                var errorMessageElement = document.getElementById("error-contact"); 
+                errorMessageElement.textContent = errorMessage;
+            }
+
+            else if(errorMessage == "The subject field is required."){
+                var errorMessageElement = document.getElementById("error-subject");   
+                errorMessageElement.textContent = errorMessage;
+            }
+            else if(errorMessage == "The message field is required."){
+                var errorMessageElement = document.getElementById("error-textarea");      
+                errorMessageElement.textContent = errorMessage;
+            }
+
             
             if (xhr.status === 404) {
               errorMessage = "Page not found.";
             } else if (xhr.status === 500) {
               errorMessage = "Internal server error.";
-            } // Add more specific error messages as needed
+            } 
             displayErrorMessage(errorMessage);
           }
             }
@@ -383,9 +417,8 @@
           xhr.send(formData);
         }
         function displayErrorMessage(message) {
-      var errorMessageElement = document.getElementById("error-message");
-      errorMessageElement.textContent = message;
-    }
+            
+        }
       </script>
         
 </body>
