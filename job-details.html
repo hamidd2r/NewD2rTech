@@ -160,7 +160,7 @@ Re-Engineering">
       </div>
     </div>
   </div>
-  <!-- Offcanvas area end -->
+ 
 
 
   <div id="smooth-wrapper">
@@ -379,7 +379,7 @@ Re-Engineering">
         <p>Full time</p>
       </div>
       <div class="form-apply">
-        <form action="https://formspree.io/f/mwkjgjoa" method="POST" enctype="multipart/form-data">
+        <form id="insert-form" method="POST">
           <div class="input-apply-2">
             <p>Name *</p>
             <input type="text" name="name" required>
@@ -390,26 +390,69 @@ Re-Engineering">
           </div>
           <div class="input-apply-2">
             <p>Phone *</p>
-            <input type="tel" name="phone" required>
+            <input type="tel" name="contact" required>
           </div>
           <div class="input-apply-2">
             <p>Upload CV *</p>
-            <input type="file" name="upload">
+            <input type="file" name="resume" required>
           </div>
+          <div style="text-align: end; color: tomato;" id="error-message"></div>
           <div class="form-btn-2">
-            <button class="wc-btn-primary btn-hover" id="back_form1"><span></span> back <i
-                class="fa-solid fa-arrow-right"></i></button>
-            <button type="submit" class="wc-btn-primary btn-hover"><span></span> Submit <i
+            <!-- <button class="wc-btn-primary btn-hover" id="back_form1"><span></span> back <i
+                class="fa-solid fa-arrow-right"></i></button> -->
+            <button type="button" onclick="submitInsert()" class="wc-btn-primary btn-hover"><span></span> Submit <i
                 class="fa-solid fa-arrow-right"></i></button>
           </div>
-        </form>
+        </form>   
+      
       </div>
       
     </div>
   </div>
 
 
+  <script>
+    function submitInsert() {
+      var form = document.getElementById("insert-form");
+      var formData = new FormData(form);
+      console.log(formData)
 
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://demo.d2rtech.com/api/api/resume", true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+
+            console.log(xhr.responseText);
+            window.location.href = "thank-you.html";
+        
+            // You can handle the successful response here
+          } 
+          else {
+            // Request failed, handle the error
+            const obj = JSON.parse(xhr.response);
+            console.log(obj.message)
+            var errorMessage = obj.message;
+            
+            if (xhr.status === 404) {
+              errorMessage = "Page not found.";
+            } else if (xhr.status === 500) {
+              errorMessage = "Internal server error.";
+            } // Add more specific error messages as needed
+            displayErrorMessage(errorMessage);
+          }
+        }
+      };
+
+      xhr.send(formData);
+    }
+
+    function displayErrorMessage(message) {
+      var errorMessageElement = document.getElementById("error-message");
+      errorMessageElement.textContent = message;
+    }
+  </script>
 
 
 

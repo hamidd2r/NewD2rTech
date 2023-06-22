@@ -3421,7 +3421,7 @@
   
 
   
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
+    document.getElementById("insert-form").addEventListener("button", function(event) {
         // Prevent form submission
         event.preventDefault();
 

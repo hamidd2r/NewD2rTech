@@ -214,7 +214,7 @@
                                         </div>
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
-                                                <input type="tel" name="phone" id="contact" placeholder="Phone">
+                                                <input type="tel" name="contact" id="contact" placeholder="contact">
                                             </div>
                                             <div class="col-xxl-6 col-xl-6 col-12">
                                                 <input type="text" name="subject" id="subject" placeholder="Subject *" required>
@@ -225,12 +225,15 @@
                                                 <textarea name="message" id="message" placeholder="Messages *" required></textarea>
                                             </div>
                                         </div>
+                                        <div style="text-align: end; color: tomato;" id="error-message"></div>
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <div class="btn_wrapper">
                                                     <button type="button" onclick="submitInsert()" class="wc-btn-primary btn-hover btn-item"><span></span> Send Messages <i class="fa-solid fa-arrow-right"></i></button>
                                                 </div>
                                             </div>
+                                          
+
                                         </div>
                                     </form>
                                 </div>
@@ -346,30 +349,44 @@
     <!-- contact -->
 
     <script>
-            function submitInsert() {
-                //alert("work");
-                var formData = {
-                    name: $("#name").val(),
-                    email: $("#email").val(),
-                    contact: $("#contact").val(),
-                    subject: $("#subject").val(),
-                    message: $("#message").val()
-                };
+        function submitInsert() {
+          var form = document.getElementById("insert-form");
+          var formData = new FormData(form);
+    
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://demo.d2rtech.com/api/api/contact", true);
+    
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200) {
+                window.location.href = "thank-you.html";
+                // You can handle the successful response here
+              } 
 
-                $.ajax({
-                type: "POST",
-                url: "https://demo.d2rtech.com/api/api/contact",
-                data: formData,
-                dataType: "json",
-                encode: true,
-                }).done(function (data) {
-                console.log(data);
-                });
-
-                event.preventDefault();
+    //          
+    else {
+            // Request failed, handle the error
+            const obj = JSON.parse(xhr.response);
+            console.log(obj.message)
+            var errorMessage = obj.message;
             
-         }
-        </script>
+            if (xhr.status === 404) {
+              errorMessage = "Page not found.";
+            } else if (xhr.status === 500) {
+              errorMessage = "Internal server error.";
+            } // Add more specific error messages as needed
+            displayErrorMessage(errorMessage);
+          }
+            }
+          };
+    
+          xhr.send(formData);
+        }
+        function displayErrorMessage(message) {
+      var errorMessageElement = document.getElementById("error-message");
+      errorMessageElement.textContent = message;
+    }
+      </script>
         
 </body>
 

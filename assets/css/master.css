@@ -623,6 +623,7 @@ a {
   transition: all 0.3s;
   position: relative;
   z-index: 1;
+  
 }
 
 button {
@@ -19846,6 +19847,7 @@ img {
 }
 .job__detail-top img {
   width: 100%;
+  padding: 61px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .job__detail-top img {
