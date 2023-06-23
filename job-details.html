@@ -426,9 +426,12 @@ Re-Engineering"
               </div>
             </div>
           </section>
+
+
+          
           <!-- Job detail end -->
         </main>
-
+  
         <!-- Footer area start -->
         <footer class="footer__area">
           <div class="footer__top">
@@ -542,6 +545,7 @@ Re-Engineering"
                           <i class="fa-solid fa-paper-plane"></i>
                         </button>
                       </form>
+                      
                     </div>
                   </div>
                 </div>
@@ -596,10 +600,12 @@ Re-Engineering"
                 onclick="submitInsert()"
                 class="wc-btn-primary btn-hover"
               >
+              <div style="" id="loader" class="loader"></div>
                 <span></span> Submit <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </form>
+         
         </div>
   
        
@@ -614,20 +620,27 @@ Re-Engineering"
       function submitInsert() {
         var form = document.getElementById("insert-form");
         var formData = new FormData(form);
+        var loader = document.getElementById('loader');
+
+        // Show the loader
+        loader.style.display = 'block';
         console.log(formData);
+
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "https://demo.d2rtech.com/api/api/resume", true);
 
-        xhr.onreadystatechange = function () {
+
+        
+    xhr.onreadystatechange = function () {
           if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
+              loader.style.display = 'none';
               console.log(xhr.responseText);
               window.location.href = "thank-you.html";
-
-              // You can handle the successful response here
+              form.reset();
             } else {
-              // Request failed, handle the error
+              loader.style.display = 'none';
               const obj = JSON.parse(xhr.response);
               console.log(obj.message);
               var errorMessage = obj.message;
@@ -636,14 +649,17 @@ Re-Engineering"
                 errorMessage = "Page not found.";
               } else if (xhr.status === 500) {
                 errorMessage = "Internal server error.";
-              } // Add more specific error messages as needed
+              } 
               displayErrorMessage(errorMessage);
             }
           }
         };
 
         xhr.send(formData);
+
       }
+
+  
 
       function displayErrorMessage(message) {
         var errorMessageElement = document.getElementById("error-message");
@@ -666,5 +682,6 @@ Re-Engineering"
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/loader.js"></script>
   </body>
 </html>

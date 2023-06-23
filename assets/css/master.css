@@ -4592,7 +4592,7 @@ img {
 }
 .modal__apply .input-apply-2 input {
   width: 100%;
-  border: 2px solid var(--white-4);
+  border: 1px solid var(--gray-10); 
   outline: none;
   background-color: white;
   padding: 15px;
@@ -5945,7 +5945,7 @@ img {
 @media only screen and (max-width: 420px) {
   .hero__area-2 .sec-title-3 {
    
-    font-size: 37px;
+    font-size: 29px;
     padding-right: 75px;
   }
 }
@@ -5959,8 +5959,7 @@ img {
 }
 @media only screen and (max-width: 323px) {
   .hero__area-2 .sec-title-3 {
-   
-    font-size: 25px;
+    font-size: 21px;
     margin-top: 40px;
    
   }
@@ -5993,7 +5992,9 @@ img {
 }
 @media only screen and (max-width: 767px) {
   .hero__area-2 .sec-title-3:last-child {
-    padding-top: 0;
+    padding-top: 40px;
+   
+   
   }
 }
 .hero__area-2 .sec-title-wrapper {
