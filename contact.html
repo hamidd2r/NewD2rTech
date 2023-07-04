@@ -238,6 +238,7 @@
                                         <div class="row g-3">
                                             <div class="col-12">
                                                 <div class="btn_wrapper">
+                                                    <div id="loader" class="loader"></div>
                                                     <button type="button" onclick="submitInsert()" class="wc-btn-primary btn-hover btn-item"><span></span> Send Message<i class="fa-solid fa-arrow-right"></i></button>
                                                 </div>
                                             </div>
@@ -350,6 +351,12 @@
         function submitInsert() {
           var form = document.getElementById("insert-form");
           var formData = new FormData(form);
+          var loader = document.getElementById('loader');
+
+            // Show the loader
+        loader.style.display = 'block';
+        console.log(formData);
+
     
           var xhr = new XMLHttpRequest();
           xhr.open("POST", "https://demo.d2rtech.com/api/api/contact", true);
@@ -357,13 +364,14 @@
           xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
               if (xhr.status === 200) {
+                loader.style.display = 'none';
                 window.location.href = "thank-you.html";
                
               } 
 
     //          
     else {
-           
+        loader.style.display = 'none';
             const obj = JSON.parse(xhr.response);
             console.log(obj.message)
             var errorMessage = obj.message;
